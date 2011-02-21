@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=StockControl()
+comment1.params=name\ orderNumber\ reorderNumber
+comment1.target=void\ newProduct(java.lang.String,\ int,\ int)
+comment2.params=product\ quant
+comment2.target=void\ newSale(Product,\ int)
+comment3.params=
+comment3.target=void\ processSales()
+comment4.params=
+comment4.target=void\ printToStock()
+numComments=5

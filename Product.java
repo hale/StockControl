@@ -1,33 +1,30 @@
-
 /**
- * Write a description of class Product here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
  */
-public class Product
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Product
-     */
-    public Product()
-    {
-        // initialise instance variables
-        x = 0;
+public class Product implements Comparable {
+    private String name;
+    private int orderNumber;
+    private int reorderNumber;
+    public Product(String name, int orderNumber, int reorderNumber)  {
+        this.name = name;
+        this.orderNumber = orderNumber;
+        this.reorderNumber = reorderNumber;
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public String getName()  {
+        return name;
+    }
+    
+    public int getorderNumber()  {
+        return orderNumber;
+    }
+    
+    public int getReorderNumber()  {
+        return reorderNumber;
+    }
+    
+    public int compareTo(Object ob)  {
+        return this.getName().compareTo(((Product) ob).getName());
     }
 }
+    

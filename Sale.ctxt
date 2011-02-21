@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=product\ quant
+comment0.target=Sale(Product,\ int)
+comment1.params=
+comment1.target=Product\ getProduct()
+comment2.params=
+comment2.target=int\ getQuant()
+comment3.params=quant
+comment3.target=void\ changeQuant(int)
+comment4.params=
+comment4.target=java.lang.String\ getProductName()
+comment5.params=ob
+comment5.target=int\ compareTo(java.lang.Object)
+numComments=6
