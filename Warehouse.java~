@@ -1,0 +1,24 @@
+import java.util.HashMap;
+/**
+ * The warehouse class manages a collection of
+ * stocked items.
+ */
+public class Warehouse  {
+    HashMap products;
+    
+    public Warehouse()  {
+        products = new HashMap();
+        
+        
+    }
+    
+    public void addProduct(String product, Integer quant)  {
+            Integer oldQuant = (Integer) products.get(product);
+            products.put(product, quant);
+        }
+    
+
+
+
+
+}

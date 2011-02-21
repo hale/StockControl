@@ -1,0 +1,24 @@
+public class Product  {
+    private String name;
+    private int reorderLevel;
+    private int orderLevel;
+    public Product(String name, int reorderLevel, int orderLevel)  {
+        this.name = name;
+        this.reorderLevel = reorderLevel;
+        this.orderLevel = orderLevel;
+    }
+    
+    public String getName()  {
+        return name;
+    }
+    
+    public int getReorderLevel()  {
+        return reorderLevel;
+    }
+    
+    public int getOrderLevel()  {
+        return orderLevel;
+    }
+    
+    
+}

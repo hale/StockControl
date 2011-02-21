@@ -1,0 +1,19 @@
+import java.util.HashMap;
+
+public class StockManager  {
+    HashMap stockList;
+
+    public StockManager()  {
+        stockList = new HashMap();
+
+    }
+
+    public void addStock(String name, Integer quant)  {
+        Integer oldQuant = new Integer(0);
+        if (stockList.get(name) != null)  {
+            oldQuant = (Integer) stockList.get(name);
+        }
+        stockList.put(name, new Integer(quant.intValue() + oldQuant.intValue()));
+    }
+
+}
