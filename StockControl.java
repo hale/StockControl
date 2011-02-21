@@ -35,10 +35,13 @@ public class StockControl  {
                 }
             }
         }    while (dupes);
+        
+        
 
     }
 
     public void printToStock()  {
+        
 
     }
 }
