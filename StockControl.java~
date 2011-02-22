@@ -13,12 +13,12 @@ public class StockControl  {
 
     }
 
-    public boolean newProduct(String name, int initStock, int reorderLevel, int orderLevel)  {
-        return products.add(new Product(name, initStock, reorderLevel, orderLevel));
+    public boolean newProduct(String name, int stock, int reorderLevel, int orderLevel)  {
+        return products.add(new Product(name, stock, reorderLevel, orderLevel));
     }
 
-    public void newSale(Product product, int quant)  {
-        sales.add(new Sale(product, quant));
+    public boolean newSale(Product product, int quant)  {
+        return sales.add(new Sale(product, quant));
     }
     
     public Product getProduct(int index)  {
@@ -27,6 +27,55 @@ public class StockControl  {
     
     public int getProductsLength()  {
         return products.size();
+    }
+    /**
+     * Returns the first product in the list with a stock greater than 0.
+     */
+    public Product getStockedProduct()  {
+        for (Product product : products)  {
+            if (product.getStock() > 0)  {
+                return product;
+            }
+        }
+        return null;
+    }
+        
+    
+    public void processSales()  {
+        for (Product product : products)  {
+            for (Sale sale : sales)  {
+                if (sale.getProductName() == product.getName())  {
+                    product.removeStock(sale.getQuant());
+                }
+            }
+        }
+            
+    }
+    
+    public void printProducts()  {
+        System.out.println("PRODUCTS");
+        for (Product product : products)  {
+            System.out.println("    " + product);
+        }
+        System.out.println();
+    }
+    
+    public void printSales()  {
+        System.out.println("SALES");
+        for (Sale sale : sales)  {
+            System.out.println("    " + sale);
+        }
+        System.out.println();
+    }
+    
+    public void sortLists()  {
+        Collections.sort(sales);
+        Collections.sort(products);
+    }
+    
+    public void shuffleLists()  {
+        Collections.shuffle(sales);
+        Collections.shuffle(products);
     }
 
   

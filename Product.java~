@@ -3,12 +3,12 @@
  */
 public class Product implements Comparable {
     private String name;
-    private int initStock;
-    private int orderNumber;
-    private int reorderNumber;
-    public Product(String name, int initStock, int reorderLevel, int orderLevel)  {
+    private int stock;
+    private int reorderLevel;
+    private int orderLevel;
+    public Product(String name, int stock, int reorderLevel, int orderLevel)  {
         this.name = name;
-        this.initStock = initStock;
+        this.stock = stock;
         this.reorderLevel = reorderLevel;
         this.orderLevel = orderLevel;
     }
@@ -17,8 +17,8 @@ public class Product implements Comparable {
         return name;
     }
     
-    public int getInitStock()  {
-        return initStock;
+    public int getStock()  {
+        return stock;
     }
     
     public int getReorderLevel()  {
@@ -31,6 +31,10 @@ public class Product implements Comparable {
     
     public int compareTo(Object ob)  {
         return this.getName().compareTo(((Product) ob).getName());
+    }
+    
+    public String toString()  {
+        return name + "        " + stock + "    " + reorderLevel + "    " + orderLevel;
     }
 }
     

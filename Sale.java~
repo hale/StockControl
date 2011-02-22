@@ -23,7 +23,7 @@ public class Sale implements Comparable {
     }
     
        public int compareTo(Object ob) {
-        return productName.compareTo(((Sale) ob).getProductName());
+        return this.getProductName().compareTo(((Sale) ob).getProductName());
     }
     
     public String toString()  {
