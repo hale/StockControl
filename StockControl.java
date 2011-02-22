@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 /**
- * 
+ * The stock control class
  */
 public class StockControl  {
     private ArrayList<Product> products;
@@ -13,36 +13,22 @@ public class StockControl  {
 
     }
 
-    public void newProduct(String name, int orderNumber, int reorderNumber)  {
-        products.add(new Product(name, orderNumber, reorderNumber));
+    public boolean newProduct(String name, int initStock, int reorderLevel, int orderLevel)  {
+        return products.add(new Product(name, initStock, reorderLevel, orderLevel));
     }
 
-    public void newSale(Product product, int quant)  {
-        sales.add(new Sale(product, quant));
+    public boolean newSale(Product product, int quant)  {
+        return sales.add(new Sale(product, quant));
+    }
+    
+    public Product getProduct(int index)  {
+        return products.get(index);
+    }
+    
+    public int getProductsLength()  {
+        return products.size();
     }
 
-    public void processSales()  {
-        Collections.sort(sales);
-        boolean dupes = true;
-        do  {
-            for (int i = 0; i < sales.size(); i++)  {
-                if (sales.get(i).getProductName().equals(sales.get(i+1).getProductName()))  {
-                    sales.get(i).changeQuant(sales.get(i).getQuant() + sales.get(i+1).getQuant());
-                    sales.remove(i+1);
-                }
-                else {
-                    dupes = false;
-                }
-            }
-        }    while (dupes);
-        
-        
-
-    }
-
-    public void printToStock()  {
-        
-
-    }
+  
 }
 

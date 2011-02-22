@@ -3,24 +3,30 @@
  */
 public class Product implements Comparable {
     private String name;
-    private int orderNumber;
-    private int reorderNumber;
-    public Product(String name, int orderNumber, int reorderNumber)  {
+    private int initStock;
+    private int reorderLevel;
+    private int orderLevel;
+    public Product(String name, int initStock, int reorderLevel, int orderLevel)  {
         this.name = name;
-        this.orderNumber = orderNumber;
-        this.reorderNumber = reorderNumber;
+        this.initStock = initStock;
+        this.reorderLevel = reorderLevel;
+        this.orderLevel = orderLevel;
     }
     
     public String getName()  {
         return name;
     }
     
-    public int getorderNumber()  {
-        return orderNumber;
+    public int getInitStock()  {
+        return initStock;
     }
     
-    public int getReorderNumber()  {
-        return reorderNumber;
+    public int getReorderLevel()  {
+        return reorderLevel;
+    }
+    
+    public int getOrderLevel()  {
+        return orderLevel;
     }
     
     public int compareTo(Object ob)  {

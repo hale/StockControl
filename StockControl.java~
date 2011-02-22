@@ -1,33 +1,34 @@
-
+import java.util.ArrayList;
+import java.util.Collections;
 /**
- * Write a description of class StockControl here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
+ * The stock control class
  */
-public class StockControl
-{
-    // instance variables - replace the example below with your own
-    private int x;
+public class StockControl  {
+    private ArrayList<Product> products;
+    private ArrayList<Sale> sales;
 
-    /**
-     * Constructor for objects of class StockControl
-     */
-    public StockControl()
-    {
-        // initialise instance variables
-        x = 0;
+    public StockControl()  {
+        products = new ArrayList();
+        sales = new ArrayList();
+
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public boolean newProduct(String name, int initStock, int reorderLevel, int orderLevel)  {
+        return products.add(new Product(name, initStock, reorderLevel, orderLevel));
     }
+
+    public void newSale(Product product, int quant)  {
+        sales.add(new Sale(product, quant));
+    }
+    
+    public Product getProduct(int index)  {
+        return products.get(index);
+    }
+    
+    public int getProductsLength()  {
+        return products.size();
+    }
+
+  
 }
+
