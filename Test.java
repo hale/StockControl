@@ -51,6 +51,11 @@ public class Test  {
         if (product == null)  {
             return;
         }
+        
+        System.out.println("Stock: " + product.getStock());
+        System.out.println("Sale: " + rand.nextInt(product.getStock()));
+        System.out.println();
+        
         stockControl.newSale(product, (rand.nextInt(product.getStock()+1)+1));
         stockControl.processSales();
     }

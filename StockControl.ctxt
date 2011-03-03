@@ -16,6 +16,7 @@ comment5.target=Product\ getStockedProduct()
 comment5.text=\r\n\ Returns\ the\ first\ product\ in\ the\ list\ with\ a\ stock\ greater\ than\ 0.\r\n
 comment6.params=
 comment6.target=void\ processSales()
+comment6.text=\r\n\ HEREIN\ LIES\ THE\ PROBLEM\!\r\n
 comment7.params=
 comment7.target=void\ printProducts()
 comment8.params=

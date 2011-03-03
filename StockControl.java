@@ -41,11 +41,13 @@ public class StockControl  {
         return null;
     }
         
-    
+    /**
+     * HEREIN LIES THE PROBLEM!
+     */
     public void processSales()  {
         for (Product product : products)  {
             for (Sale sale : sales)  {
-                if (sale.getProductName() == product.getName())  {
+                if (sale.getProductName().equals(product.getName()))  {
                     product.removeStock(sale.getQuant());
                 }
             }
