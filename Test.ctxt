@@ -5,5 +5,5 @@ comment1.params=quant
 comment1.target=boolean\ addStock(int)
 comment2.params=
 comment2.target=void\ addSale()
-comment2.text=\n\ This\ method\ adds\ a\ new\ sale\ to\ the\ sales\ list\ controlled\ within\n\ the\ StockControl\ class.\ \ The\ product\ to\ be\ sold\ is\ chosen\ at\ \n\ random\ from\ the\ list\ of\ products\ managed\ by\ StockControl.\ The\ quantity\n\ of\ the\ sale\ is\ randomly\ chosen,\ limited\ by\ the\ amount\ of\ product\ in\ stock\n\ (stock).\n\ \n
+comment2.text=\r\n\ This\ method\ adds\ a\ new\ sale\ to\ the\ sales\ list\ controlled\ within\r\n\ the\ StockControl\ class.\ \ The\ product\ to\ be\ sold\ is\ chosen\ at\ \r\n\ random\ from\ the\ list\ of\ products\ managed\ by\ StockControl.\ The\ quantity\r\n\ of\ the\ sale\ is\ randomly\ chosen,\ limited\ by\ the\ amount\ of\ product\ in\ stock\r\n\ (stock).\r\n\ \r\n
 numComments=3
